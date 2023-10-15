@@ -90,7 +90,7 @@ let familyTree ={
 // with map 
 // second child vehicle name
 // console.log("------second child vehicle name-------");
-// let vname= family.child[1].vehicle.map((e)=>{
+// let vname= familyTree.child[1].vehicle.map((e)=>{
 //     return e.name
 // })
 
@@ -99,7 +99,7 @@ let familyTree ={
 // sum of third child sons age 
   
 // console.log("--------sum of third child sons age--------");
-// let age1= family.child[2].child.map((e)=>{
+// let age1= familyTree.child[2].child.map((e)=>{
 //     return e.age
 // })
 
@@ -112,9 +112,9 @@ let familyTree ={
 // vehicle details of each family member
 let vehicleNames = [];
 
-for (let i = 0; i < family.child.length; i++) {
-  for (let j = 0; j < family.child[i].vehicle.length; j++) {
-    vehicleNames.push(family.child[i].vehicle[j]);
+for (let i = 0; i < familyTree.child.length; i++) {
+  for (let j = 0; j < familyTree.child[i].vehicle.length; j++) {
+    vehicleNames.push(familyTree.child[i].vehicle[j]);
   }
 }
 
@@ -122,7 +122,7 @@ console.log(vehicleNames);
 
 console.log("vehicle details of each family member");
 function fun() {
-    let vee=family.child.filter((e)=>{
+    let vee=familyTree.child.filter((e)=>{
             // console.log(e);
             return e?.vehicle
     })
@@ -137,8 +137,8 @@ function fun() {
 // -> all son of your dada name only
 let sonNames = [];
 
-for (let i = 0; i < family.child.length; i++) {
-  sonNames.push(family.child[i].name);
+for (let i = 0; i < familyTree.child.length; i++) {
+  sonNames.push(familyTree.child[i].name);
 }
 
 console.log(sonNames);
@@ -146,9 +146,9 @@ console.log(sonNames);
 // -> all son of father/uncle's
 let sonNames1 = [];
 
-for (let i = 0; i < family.child.length; i++) {
-  for (let j = 0; j < family.child[i].child.length; j++) {
-    sonNames1.push(family.child[i].child[j].name);
+for (let i = 0; i <familyTree.child.length; i++) {
+  for (let j = 0; j < familyTree.child[i].child.length; j++) {
+    sonNames1.push(familyTree.child[i].child[j].name);
   }
 }
 
